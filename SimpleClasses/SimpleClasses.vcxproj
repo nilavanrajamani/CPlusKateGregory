@@ -155,9 +155,15 @@
     <ClInclude Include="Transaction.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Account.cpp" />
-    <ClCompile Include="SimpleClasses.cpp" />
-    <ClCompile Include="Transaction.cpp" />
+    <ClCompile Include="Account.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="SimpleClasses.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Transaction.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
